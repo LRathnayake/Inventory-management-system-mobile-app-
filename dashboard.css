@@ -1,0 +1,113 @@
+/* Mobile-first Dashboard Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body.dashboard {
+    background: linear-gradient(to right, #6b77ff, #eae6de);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    width: 100%;
+    padding: 15px;
+    background-color:  rgba(79, 91, 232, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.dashboard-header h1 {
+    color: #081123;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.dashboard-header p {
+    color: #081123;
+    font-size: 0.9rem;
+}
+
+/* Navigation Menu */
+.navigation {
+    width: 100%;
+    background-color: transparent; /* Changed from #fff to transparent */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navigation ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+.navigation ul li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Changed border color */
+}
+
+.navigation ul li:last-child {
+    border-bottom: none;
+}
+
+.navigation button {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    background-color: rgba(79, 91, 232, 0.8); /* New button background color */
+    border: none;
+    color: #fff; /* Changed text color to white */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navigation button:hover {
+    background-color: rgba(59, 71, 212, 0.9); /* Darker on hover */
+}
+
+.navigation button:active {
+    background-color: #2a3baf; /* Even darker when active */
+}
+
+.navigation button .icon {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    color: #fff; /* Changed icon color to white */
+}
+
+.navigation button .title {
+    flex-grow: 1;
+    font-size: 0.95rem;
+}
+
+/* Media queries for larger screens */
+@media (min-width: 768px) {
+    .container {
+        max-width: 480px; /* Keep it mobile-like even on larger screens */
+    }
+}

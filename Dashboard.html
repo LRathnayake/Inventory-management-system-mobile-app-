@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="navigation.js"></script>
+</head>
+<body class="dashboard">
+    <div class="container">
+        <!-- Dashboard Header -->
+        <div class="dashboard-header">
+            <h1>CHELLO DAIRY PROUDCTS</h1>
+            <p>Welcome back</p>
+        </div>
+        
+        <!-- Navigation Menu -->
+        <div class="navigation">
+            <ul>
+                <li>
+                    <button onclick="window.location.href='Stock.php'">
+                            <span class="icon">
+                            <ion-icon name="apps-sharp"></ion-icon>
+                        </span>
+                        <span class="title">Stock</span>
+                    </button>
+                </li>
+                
+                <li>
+                    <button onclick="navigateTo('dailySummary')">
+                        <span class="icon">
+                            <ion-icon name="podium-sharp"></ion-icon>
+                        </span>
+                        <span class="title">Daily Summary</span>
+                     </button>
+                </li>
+                
+
+
+                <li>
+                    <button onclick="navigateTo('creditBill')">
+                        <span class="icon">
+                            <ion-icon name="newspaper-sharp"></ion-icon>
+                        </span>
+                        <span class="title">Credit Bill</span>
+                    </button>
+                </li>
+
+                <li>
+                    <button onclick="navigateTo('cashBill')">
+                        <span class="icon">
+                            <ion-icon name="newspaper-sharp"></ion-icon>
+                        </span>
+                        <span class="title">Cash Bill</span>
+                    </button>
+                </li>
+
+                <li>
+                    <button onclick="navigateTo('discountShops')">
+                        <span class="icon">
+                            <ion-icon name="storefront-sharp"></ion-icon>
+                        </span>
+                        <span class="title">Discount Shops</span>
+                    </button>
+                </li>
+
+                <li>
+                    <button onclick="navigateTo('cheques')">
+                        <span class="icon">
+                            <ion-icon name="document-sharp"></ion-icon>
+                        </span>
+                        <span class="title">Cheques</span>
+                    </button>
+                </li>
+
+                <li>
+                    <button onclick="navigateTo('damagedItems')">
+                        <span class="icon">
+                            <ion-icon name="information-circle-sharp"></ion-icon>
+                        </span>
+                        <span class="title">Damaged Items</span>
+                    </button>
+                </li>
+
+                <li>
+                    <button onclick="window.location.href='bill.php'">
+                            <span class="icon">
+                            <ion-icon name="apps-sharp"></ion-icon>
+                        </span>
+                        <span class="title">Bill</span>
+                    </button>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

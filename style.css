@@ -1,0 +1,1101 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #6b77ff, #eae6de);
+}
+
+
+.screen-backdrop{
+    width: 100%;
+    height: 25rem;
+    background-color: #feca57;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.user-profile .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.user-profile .icon ion-icon {
+    font-size: 24px;
+    color: #8E44AD;
+}
+
+.user-profile .user-info {
+    flex-grow: 1;
+}
+
+.user-profile .user-info h3 {
+    margin-bottom: 5px;
+}
+
+.dashboard-menu {
+    background-color: #8E44AD;
+}
+
+.dashboard-menu button {
+    width: 100%;
+    text-align: left;
+    padding: 15px 20px;
+    background: none;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-menu button:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.dashboard-menu button ion-icon {
+    font-size: 20px;
+}
+
+
+
+
+
+/*login*/
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('milk.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.glass-container {
+    width: 90%;
+    max-width: 350px;
+    padding: 30px 20px;
+    border-radius: 50px;
+    background-color: rgba(70, 56, 56, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 420px;
+    background: transparent;
+    color: #120404;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.wrapper h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.wrapper .input-box {
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    padding: 0 15px;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 80px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 991px) {
+    .navigation {
+        left: -300px;
+    }
+    
+    .navigation.active {
+        width: 300px;
+        left: 0;
+    }
+    
+    .toggle {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        background: var(--blue);
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1001;
+    }
+    
+    .toggle.active {
+        left: 320px;
+    }
+    
+    .toggle ion-icon {
+        color: var(--white);
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .glass-container {
+        padding: 20px 15px;
+        border-radius: 30px;
+    }
+    
+    .wrapper {
+        padding: 15px;
+    }
+    
+    .wrapper h1 {
+        font-size: 1.8rem;
+    }
+    
+    .input-box input {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .glass-container {
+        width: 95%;
+        border-radius: 25px;
+    }
+    
+    .wrapper h1 {
+        font-size: 1.5rem;
+    }
+    
+    .wrapper .input-box {
+        height: 45px;
+        margin: 15px 0;
+    }
+    
+    .wrapper .btn {
+        height: 40px;
+        font-size: 14px;
+    }
+    
+    .navigation.active {
+        width: 250px;
+    }
+    
+    .toggle.active {
+        left: 270px;
+    }
+}
+
+
+/* Additional CSS to style buttons like navigation items       "dashboard*/
+.navigation button {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navigation button:hover {
+    background-color: rgba(218, 17, 111, 0.1);
+}
+
+.navigation button .icon {
+    display: flex;
+    align-items: center;
+}
+
+.navigation button .title {
+    flex-grow: 1;
+}
+
+
+
+/*dailysummery*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Background with gradient overlay on the Chello products image */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #6b77ff, #eae6de);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.navigation {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.navigation ul {
+    list-style-type: none;
+}
+
+/* Styled blue Back to Dashboard button */
+.navigation button {
+    background-color: #3366cc;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.navigation button:hover {
+    background-color: #254e9e;
+    transform: translateY(-2px);
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+/* Light blue form background */
+.main {
+    background-color: #e6f7ff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    color: #2a5298;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Form styling with grid layout */
+form {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 15px;
+    align-items: center;
+}
+
+label {
+    color: #2a5298;
+    font-weight: 500;
+    grid-column: 1;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    grid-column: 2;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #feca57;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    grid-column: 1 / span 2;
+    background-color: #3366cc;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #254e9e;
+    transform: translateY(-2px);
+}
+
+
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* CHANGED: Added background image with overlay gradient */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to right, #6b77ff, #eae6de);
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .navigation {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+        
+        .navigation ul {
+            list-style-type: none;
+        }
+        
+        /* CHANGED: Styled the Back to Dashboard button */
+        .navigation button {
+            background-color: #3366cc; /* Changed to blue */
+            color: white; /* Changed text to white */
+            border: none;
+            padding: 12px 20px; /* Made button slightly larger */
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+            transition: all 0.3s ease; /* Added transition effect */
+        }
+        
+        .navigation button:hover {
+            background-color: #254e9e; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+        
+        .icon {
+            margin-right: 10px;
+        }
+        
+        .main {
+            background-color: #e6f7ff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        
+        h1 {
+            color: #2a5298;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        form {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        label {
+            color: #2a5298;
+            font-weight: 500;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #feca57;
+        }
+        input[type="submit"] {
+            grid-column: 1 / span 2;
+            background-color: #3366cc;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            padding: 12px;
+            transition: all 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #254e9e;
+            transform: translateY(-2px);
+        }
+
+
+        /*creditBill*/
+        
+        * {
+        
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* CHANGED: Added background image with overlay gradient */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to right, #6b77ff, #eae6de);
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .navigation {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+        
+        .navigation ul {
+            list-style-type: none;
+        }
+        
+        /* CHANGED: Styled the Back to Dashboard button */
+        .navigation button {
+            background-color: #3366cc; /* Changed to blue */
+            color: white; /* Changed text to white */
+            border: none;
+            padding: 12px 20px; /* Made button slightly larger */
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+            transition: all 0.3s ease; /* Added transition effect */
+        }
+        
+        .navigation button:hover {
+            background-color: #254e9e; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+        
+        .icon {
+            margin-right: 10px;
+        }
+        
+        .main {
+            background-color: #e6f7ff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        
+        h1 {
+            color: #2a5298;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        form {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        label {
+            color: #2a5298;
+            font-weight: 500;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #feca57;
+        }
+        input[type="submit"] {
+            grid-column: 1 / span 2;
+            background-color: #3366cc;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            padding: 12px;
+            transition: all 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #254e9e;
+            transform: translateY(-2px);
+        }
+     
+
+
+        /*cashbill*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* CHANGED: Added background image with overlay gradient */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to right, #6b77ff, #eae6de);
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .navigation {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+        
+        .navigation ul {
+            list-style-type: none;
+        }
+        
+        /* CHANGED: Styled the Back to Dashboard button */
+        .navigation button {
+            background-color: #3366cc; /* Changed to blue */
+            color: white; /* Changed text to white */
+            border: none;
+            padding: 12px 20px; /* Made button slightly larger */
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+            transition: all 0.3s ease; /* Added transition effect */
+        }
+        
+        .navigation button:hover {
+            background-color: #254e9e; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+        
+        .icon {
+            margin-right: 10px;
+        }
+        
+        .main {
+            background-color: #e6f7ff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        
+        h1 {
+            color: #2a5298;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        form {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        label {
+            color: #2a5298;
+            font-weight: 500;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #feca57;
+        }
+        input[type="submit"] {
+            grid-column: 1 / span 2;
+            background-color: #3366cc;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            padding: 12px;
+            transition: all 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #254e9e;
+            transform: translateY(-2px);
+        }
+
+
+        /*discount shop*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* CHANGED: Added background image with overlay gradient */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to right, #6b77ff, #eae6de);
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .navigation {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+        
+        .navigation ul {
+            list-style-type: none;
+        }
+        
+        /* CHANGED: Styled the Back to Dashboard button */
+        .navigation button {
+            background-color: #3366cc; /* Changed to blue */
+            color: white; /* Changed text to white */
+            border: none;
+            padding: 12px 20px; /* Made button slightly larger */
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+            transition: all 0.3s ease; /* Added transition effect */
+        }
+        
+        .navigation button:hover {
+            background-color: #254e9e; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+        
+        .icon {
+            margin-right: 10px;
+        }
+        
+        .main {
+            background-color: #e6f7ff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        
+        h1 {
+            color: #2a5298;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        form {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        label {
+            color: #2a5298;
+            font-weight: 500;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #feca57;
+        }
+        input[type="submit"] {
+            grid-column: 1 / span 2;
+            background-color: #3366cc;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            padding: 12px;
+            transition: all 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #254e9e;
+            transform: translateY(-2px);
+        }
+
+
+        /*cheques*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* CHANGED: Added background image with overlay gradient */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to right, #6b77ff, #eae6de);
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .navigation {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+        
+        .navigation ul {
+            list-style-type: none;
+        }
+        
+        /* CHANGED: Styled the Back to Dashboard button */
+        .navigation button {
+            background-color: #3366cc; /* Changed to blue */
+            color: white; /* Changed text to white */
+            border: none;
+            padding: 12px 20px; /* Made button slightly larger */
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+            transition: all 0.3s ease; /* Added transition effect */
+        }
+        
+        .navigation button:hover {
+            background-color: #254e9e; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+        
+        .icon {
+            margin-right: 10px;
+        }
+        
+        .main {
+            background-color: #e6f7ff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        
+        h1 {
+            color: #2a5298;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        form {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        label {
+            color: #2a5298;
+            font-weight: 500;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #feca57;
+        }
+        input[type="submit"] {
+            grid-column: 1 / span 2;
+            background-color: #3366cc;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            padding: 12px;
+            transition: all 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #254e9e;
+            transform: translateY(-2px);
+        }
+
+
+        /*damageitem*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* CHANGED: Added background image with overlay gradient */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to right, #6b77ff, #eae6de);
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .navigation {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+        
+        .navigation ul {
+            list-style-type: none;
+        }
+        
+        /* CHANGED: Styled the Back to Dashboard button */
+        .navigation button {
+            background-color: #3366cc; /* Changed to blue */
+            color: white; /* Changed text to white */
+            border: none;
+            padding: 12px 20px; /* Made button slightly larger */
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+            transition: all 0.3s ease; /* Added transition effect */
+        }
+        
+        .navigation button:hover {
+            background-color: #254e9e; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+        
+        .icon {
+            margin-right: 10px;
+        }
+        
+        .main {
+            background-color: #e6f7ff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        
+        h1 {
+            color: #2a5298;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        form {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        label {
+            color: #2a5298;
+            font-weight: 500;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #feca57;
+        }
+        input[type="submit"] {
+            grid-column: 1 / span 2;
+            background-color: #3366cc;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            padding: 12px;
+            transition: all 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #254e9e;
+            transform: translateY(-2px);
+        }
+        .screen-backdrop{
+            width: 100%;
+            height: 25rem;
+            background-color: blue;
+        }
+
+
+
+
+
